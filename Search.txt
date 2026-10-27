@@ -1,0 +1,37 @@
+using System.Threading.Channels;
+
+namespace Exaption_Handling
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int div = 0;
+            try 
+            {
+                int x = 4;
+                 div = 5 / x;
+            } catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }finally
+            {
+                Console.WriteLine($"{div}");
+            }
+
+            string[] arr = { "red", "green", "yellow" };
+            int index = 5;
+            try
+            {
+                Console.WriteLine(arr[5]);
+            }catch (Exception EX)
+            {
+                Console.WriteLine(EX.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Error");
+            }
+        }
+    }
+}
